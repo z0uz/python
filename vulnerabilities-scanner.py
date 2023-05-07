@@ -1,7 +1,6 @@
 import os
 
-def scan():
-    target = input("Enter the IP address or website to scan: ")
+def scan(target):
     # Run Nmap scan to get open ports
     nmap_command = f"nmap -p- -T4 -oN nmap_scan.txt {target}"
     os.system(nmap_command)
@@ -39,3 +38,7 @@ def scan():
             print(vulnerability)
     else:
         print("No vulnerabilities found.")
+
+if __name__ == "__main__":
+    target = input("Enter an IP address or website to scan: ")
+    scan(target)
