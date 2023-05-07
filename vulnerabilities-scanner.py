@@ -38,3 +38,6 @@ def scan(target):
             print(vulnerability)
     else:
         print("No vulnerabilities found.")
+     
+ scan("192.168.178.39")
+input("press Enter to Exit...")
